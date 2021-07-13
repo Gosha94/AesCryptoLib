@@ -9,7 +9,9 @@ namespace CryptoWrapper.Console
         {
             var cryptoMain = new CryptoManager();
             var shifr = cryptoMain.Encrypt("1");
-            var clearText = cryptoMain.Decrypt("HNI4J6NqkHUOhgrSgoPv7rE4I0vfclHuYuj9iTMGkA==");            
+            var clearText = cryptoMain.Decrypt("1");
+            
+            System.Console.WriteLine();
         }
     }
 }

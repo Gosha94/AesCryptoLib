@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoWrapper.Console", "Cr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesCryptoLib.Tests", "AesCryptoLib.Tests\AesCryptoLib.Tests.csproj", "{B4D5355B-48B4-4156-8480-36E67C6E1B78}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DF639F74-44F1-41CE-8F6A-431343A0B3AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9362D85D-BE59-42B1-8B86-1A8BCE4E43BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +34,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DADC829A-1467-4278-8F44-2D04D2D58755} = {DF639F74-44F1-41CE-8F6A-431343A0B3AF}
+		{7AA31E60-E5C3-4949-9DBF-FC1E161BEFEB} = {DF639F74-44F1-41CE-8F6A-431343A0B3AF}
+		{B4D5355B-48B4-4156-8480-36E67C6E1B78} = {9362D85D-BE59-42B1-8B86-1A8BCE4E43BF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8ADE5A47-DB17-43D2-86FB-CCF4C8F2C015}
