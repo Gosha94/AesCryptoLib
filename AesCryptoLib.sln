@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesCryptoLib.DLL", "AesCryptoLib.DLL\AesCryptoLib.DLL.csproj", "{DADC829A-1467-4278-8F44-2D04D2D58755}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoWrapper.Console", "CryptoWrapper.Console\CryptoWrapper.Console.csproj", "{7AA31E60-E5C3-4949-9DBF-FC1E161BEFEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesCryptoLib.ConsoleWrapper", "CryptoWrapper.Console\AesCryptoLib.ConsoleWrapper.csproj", "{7AA31E60-E5C3-4949-9DBF-FC1E161BEFEB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesCryptoLib.Tests", "AesCryptoLib.Tests\AesCryptoLib.Tests.csproj", "{B4D5355B-48B4-4156-8480-36E67C6E1B78}"
 EndProject

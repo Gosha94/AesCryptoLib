@@ -7,7 +7,7 @@
     <ProjectGuid>{7AA31E60-E5C3-4949-9DBF-FC1E161BEFEB}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>CryptoWrapper.Console</RootNamespace>
-    <AssemblyName>CryptoWrapper.Console</AssemblyName>
+    <AssemblyName>AesCryptoLib.ConsoleWrapper</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

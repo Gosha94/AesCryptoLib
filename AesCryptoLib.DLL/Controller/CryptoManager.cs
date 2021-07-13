@@ -1,12 +1,13 @@
-﻿using System.Security.Cryptography;
-using System.Text;
+﻿using System;
 using System.IO;
-using System;
+using System.Text;
+using System.Security.Cryptography;
 
 namespace AesCryptoLib.DLL.Controller
 {
     public class CryptoManager
     {
+        //TODO выбирать закрытый ключ из БД
         private string _encryptionKey = "asf56hjk";
         private byte[] _salt;
 
