@@ -10,7 +10,8 @@ namespace CryptoWrapper.ConsoleUI
         {
             var cryptoMain = new CryptoManager();
             //var shifr = cryptoMain.Encrypt("1");
-            //var clearText = cryptoMain.Decrypt("1");
+            //var clearText = cryptoMain.Decrypt("1");           
+
             Console.ReadLine();
         }
     }
