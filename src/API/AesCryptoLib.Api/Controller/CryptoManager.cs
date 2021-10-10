@@ -7,8 +7,7 @@ namespace AesCryptoLib.DLL.Controller
 {
     public class CryptoManager
     {
-        //TODO выбирать закрытый ключ из БД
-        private string _encryptionKey = "asf56hjk";
+        private string _encryptionKey = "json!!!!!!!!!!!!!!!!!!!";
         private byte[] _salt;
 
         public CryptoManager()
