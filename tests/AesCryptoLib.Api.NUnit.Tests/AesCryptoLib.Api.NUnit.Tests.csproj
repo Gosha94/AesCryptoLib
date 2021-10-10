@@ -8,8 +8,8 @@
     <ProjectGuid>{B4D5355B-48B4-4156-8480-36E67C6E1B78}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AesCryptoLib.Tests</RootNamespace>
-    <AssemblyName>AesCryptoLib.Tests</AssemblyName>
+    <RootNamespace>AesCryptoLib.Api.NUnit.Tests</RootNamespace>
+    <AssemblyName>AesCryptoLib.Api.NUnit.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -54,12 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AesCryptoLib.DLL\AesCryptoLib.DLL.csproj">
-      <Project>{dadc829a-1467-4278-8f44-2d04d2d58755}</Project>
-      <Name>AesCryptoLib.DLL</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
