@@ -44,11 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configs\JsonDBaseConfiguration.cs" />
-    <Compile Include="Configs\JsonSaltFileConfiguration.cs" />
     <Compile Include="Context\JsonFileContext.cs" />
-    <Compile Include="Helpers\FileFindHelper.cs" />
-    <Compile Include="Helpers\JsonParseHelper.cs" />
+    <Compile Include="Helpers\JsonParseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

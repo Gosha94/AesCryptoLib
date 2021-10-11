@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
-using System.Security.Cryptography;
 using System.Text;
+using System.Security.Cryptography;
 
 namespace AesCryptoLib.BusinessLogic.Services
 {
@@ -10,21 +10,16 @@ namespace AesCryptoLib.BusinessLogic.Services
     /// </summary>
     public sealed class AesCryptoService
     {
-        private string _encryptionKey = "json!!!!!!!!!!!!!!!!!!!";
+        private string _encryptionKey;
         private byte[] _salt;
 
-        public AesCryptoService()
+        public AesCryptoService(string encryptKeyFromRepository)
         {
+            this._encryptionKey = encryptKeyFromRepository;
             this._salt = GenerateSalt(15);
         }
 
-        private byte[] GenerateSalt(int size)
-        {
-            Random rand = new Random();
-            byte[] IV = new byte[size];
-            rand.NextBytes(IV);
-            return IV;
-        }
+        #region Public Api
 
         public string Encrypt(string clearText)
         {
@@ -70,5 +65,21 @@ namespace AesCryptoLib.BusinessLogic.Services
             }
             return codedText;
         }
+
+
+        #endregion
+
+        #region Private Methods
+
+        private byte[] GenerateSalt(int size)
+        {
+            Random rand = new Random();
+            byte[] IV = new byte[size];
+            rand.NextBytes(IV);
+            return IV;
+        }
+
+        #endregion
+
     }
 }

@@ -5,22 +5,19 @@ namespace AesCryptoLib.JsonParser.Helpers
 {
 
     /// <summary>
-    /// Класс описывает Поисковик файла в директории
+    /// Служба предназначена для поиска файла в директории
     /// </summary>
-    internal sealed class FileFindHelper
+    public sealed class FileSearchService
     {
         private IFileConfiguration _configuration;
 
-        public FileFindHelper(IFileConfiguration configFromDi)
+        public FileSearchService(IFileConfiguration configFromDi)
         {
             #region Dependency Injection
 
             this._configuration = configFromDi;
 
             #endregion
-
-            
-
         }
 
         /// <summary>
