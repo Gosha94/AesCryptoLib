@@ -43,7 +43,9 @@
   <ItemGroup>
     <Compile Include="CommonModels\UserDataModel.cs" />
     <Compile Include="CommonModels\UserDataRepository.cs" />
+    <Compile Include="Contracts\IFileConfiguration.cs" />
     <Compile Include="Contracts\IReadOnlyUserDataRepository.cs" />
+    <Compile Include="Enums\AesCryptType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

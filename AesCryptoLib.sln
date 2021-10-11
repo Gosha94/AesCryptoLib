@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesCryptoLib.Core", "src\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesCryptoLib.Infrastructure.NUnit.IntegrationTests", "tests\AesCryptoLib.Infrastructure.NUnit.IntegrationTests\AesCryptoLib.Infrastructure.NUnit.IntegrationTests.csproj", "{CBE5F5AD-82E2-408B-B444-62325A4B89A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesCryptoLib.BusinessLogic", "src\Core\AesCryptoLib.BusinessLogic\AesCryptoLib.BusinessLogic.csproj", "{128BE15D-E165-49C3-BA28-30FFA6DD8DC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{CBE5F5AD-82E2-408B-B444-62325A4B89A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBE5F5AD-82E2-408B-B444-62325A4B89A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBE5F5AD-82E2-408B-B444-62325A4B89A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{128BE15D-E165-49C3-BA28-30FFA6DD8DC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{128BE15D-E165-49C3-BA28-30FFA6DD8DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{128BE15D-E165-49C3-BA28-30FFA6DD8DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{128BE15D-E165-49C3-BA28-30FFA6DD8DC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{7DD976CC-9D6C-4E60-BBF4-7BBB114F724D} = {79BF184C-69A3-4630-B118-03855AADB243}
 		{928BB332-92DB-43C6-BE42-E6B39199E0F8} = {CE597131-5042-4FBD-8385-956545EFE29F}
 		{CBE5F5AD-82E2-408B-B444-62325A4B89A9} = {9362D85D-BE59-42B1-8B86-1A8BCE4E43BF}
+		{128BE15D-E165-49C3-BA28-30FFA6DD8DC9} = {CE597131-5042-4FBD-8385-956545EFE29F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8ADE5A47-DB17-43D2-86FB-CCF4C8F2C015}
