@@ -1,4 +1,0 @@
-﻿namespace AesCryptoLib.DLL.Enums
-{
-    
-}
