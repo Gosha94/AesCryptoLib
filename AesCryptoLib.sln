@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesCryptoLib.BusinessLogic.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesCryptoLib.Api.UnitTests", "tests\AesCryptoLib.Api.UnitTests\AesCryptoLib.Api.UnitTests.csproj", "{13A6B59F-1789-4C58-A364-8970628E4FBA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesCryptoLib.ConsoleWrapper", "src\API\AesCryptoLib.ConsoleWrapper\AesCryptoLib.ConsoleWrapper.csproj", "{6ABB0EB2-2732-41E3-9451-83B99BBC01E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{13A6B59F-1789-4C58-A364-8970628E4FBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13A6B59F-1789-4C58-A364-8970628E4FBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13A6B59F-1789-4C58-A364-8970628E4FBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ABB0EB2-2732-41E3-9451-83B99BBC01E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ABB0EB2-2732-41E3-9451-83B99BBC01E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ABB0EB2-2732-41E3-9451-83B99BBC01E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ABB0EB2-2732-41E3-9451-83B99BBC01E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +82,7 @@ Global
 		{128BE15D-E165-49C3-BA28-30FFA6DD8DC9} = {CE597131-5042-4FBD-8385-956545EFE29F}
 		{3C550CE6-7D5C-4046-B4FB-F18A45835D04} = {9362D85D-BE59-42B1-8B86-1A8BCE4E43BF}
 		{13A6B59F-1789-4C58-A364-8970628E4FBA} = {9362D85D-BE59-42B1-8B86-1A8BCE4E43BF}
+		{6ABB0EB2-2732-41E3-9451-83B99BBC01E1} = {DEB4D93C-3470-4A8D-B1CE-4D06E5348C88}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8ADE5A47-DB17-43D2-86FB-CCF4C8F2C015}

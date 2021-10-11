@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{928BB332-92DB-43C6-BE42-E6B39199E0F8}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AesCryptoLib.Core</RootNamespace>
-    <AssemblyName>AesCryptoLib.Core</AssemblyName>
+    <ProjectGuid>{6ABB0EB2-2732-41E3-9451-83B99BBC01E1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AesCryptoLib.ConsoleWrapper</RootNamespace>
+    <AssemblyName>AesCryptoLib.ConsoleWrapper</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,13 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommonModels\UserDataModel.cs" />
-    <Compile Include="Contracts\IAesController.cs" />
-    <Compile Include="Contracts\IFileConfiguration.cs" />
-    <Compile Include="Contracts\IReadOnlyUserDataRepository.cs" />
-    <Compile Include="CustomExceptions\JsonSecretNotFoundException.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\AesCryptoLib.JsonParser\AesCryptoLib.JsonParser.csproj">
+      <Project>{7DD976CC-9D6C-4E60-BBF4-7BBB114F724D}</Project>
+      <Name>AesCryptoLib.JsonParser</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
