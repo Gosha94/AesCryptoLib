@@ -2,7 +2,7 @@
 using AesCryptoLib.Core.Contracts;
 using AesCryptoLib.Core.CommonModels;
 using Castle.MicroKernel.Registration;
-using AesCryptoLib.Core.FileConfigs;
+using AesCryptoLib.JsonParser.FileConfigs;
 
 namespace AesCryptoLib.Api.Config
 {

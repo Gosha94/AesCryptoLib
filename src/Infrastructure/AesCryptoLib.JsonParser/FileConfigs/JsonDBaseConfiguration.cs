@@ -1,6 +1,6 @@
 ﻿using AesCryptoLib.Core.Contracts;
 
-namespace AesCryptoLib.Core.FileConfigs
+namespace AesCryptoLib.JsonParser.FileConfigs
 {
     internal sealed class JsonDBaseConfiguration : IFileConfiguration
     {
