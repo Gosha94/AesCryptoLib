@@ -7,11 +7,11 @@ namespace AesCryptoLib.JsonParser.Context
     /// </summary>
     public sealed class JsonFileContext
     {
-        private JsonParseHelper _jsonParser;
+        private JsonParseService _jsonParser;
 
         public JsonFileContext()
         {
-            this._jsonParser = new JsonParseHelper();
+            this._jsonParser = new JsonParseService();
             this._jsonParser.GetDataFromJson();
         }
     }

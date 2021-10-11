@@ -1,12 +1,12 @@
 ﻿using AesCryptoLib.Core.Contracts;
 
-namespace AesCryptoLib.JsonParser.Configs
+namespace AesCryptoLib.Core.FileConfigs
 {
 
     /// <summary>
     /// Класс с настройками парсинга Конфигурации дешифровки
     /// </summary>
-    internal sealed class JsonSaltFileConfiguration : IFileConfiguration
+    public sealed class JsonSaltFileConfiguration : IFileConfiguration
     {
 
         public string FileDirectory { get; private set; }

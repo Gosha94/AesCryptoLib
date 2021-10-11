@@ -4,7 +4,7 @@
     /// <summary>
     /// Класс-парсер JSON конфигураций
     /// </summary>
-    internal sealed class JsonParseHelper
+    internal sealed class JsonParseService
     {
         internal void GetDataFromJson()
         {
