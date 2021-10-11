@@ -1,14 +1,18 @@
-﻿namespace AesCryptoLib.BusinessLogic.UnitTests
+﻿using NUnit.Framework;
+
+namespace AesCryptoLib.BusinessLogic.UnitTests.Services
 {
-    public class Class1
+
+    [TestFixture]
+    internal class AesCryptoServiceTests
     {
-        private CryptoManager _testedCryptoManager;
-        public CryptoManagerTests()
+        
+        public AesCryptoServiceTests()
         {
             this._testedCryptoManager = new CryptoManager();
         }
 
-        [TestMethod]
+        [Test]
         public void Decrypt_Test()
         {
             var shifr = "HNI4J6NqkHUOhgrSgoPv7rE4I0vfclHuYuj9iTMGkA==";
@@ -18,7 +22,7 @@
             Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
+        [Test]
         public void Encrypt_Test()
         {
             var clearText = "1";

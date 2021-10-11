@@ -17,7 +17,7 @@ namespace AesCryptoLib.JsonParser.FileConfigs
         /// </summary>
         internal JsonSaltFileConfiguration()
         {
-            this.FileDirectory = "/JsonSettings";
+            this.FileDirectory = "D:\\UkTransmitterConfig\\JsonSecret\\";
             this.FileName = "UserData.json";
         }
 

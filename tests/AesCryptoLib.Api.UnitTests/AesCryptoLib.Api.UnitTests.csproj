@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3C550CE6-7D5C-4046-B4FB-F18A45835D04}</ProjectGuid>
+    <ProjectGuid>{13A6B59F-1789-4C58-A364-8970628E4FBA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AesCryptoLib.BusinessLogic.UnitTests</RootNamespace>
-    <AssemblyName>AesCryptoLib.BusinessLogic.UnitTests</AssemblyName>
+    <RootNamespace>AesCryptoLib.Api.UnitTests</RootNamespace>
+    <AssemblyName>AesCryptoLib.Api.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -47,9 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Services\AesCryptoServiceTests.cs" />
+    <Compile Include="CryptoApiControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\FileSearchServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
