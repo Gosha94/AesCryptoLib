@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+﻿using System.Text;
 using AesCryptoLib.Core.Contracts;
 
 namespace AesCryptoLib.JsonParser.Helpers
@@ -25,9 +25,9 @@ namespace AesCryptoLib.JsonParser.Helpers
         /// </summary>
         /// <returns></returns>
         public string GetFullPathToJsonFile()
-            =>  Assembly.GetAssembly(typeof(IFileConfiguration)).Location + this._configuration.FileName;
-
-
-
+            => new StringBuilder()
+                .Append(this._configuration.FileDirectory)
+                .Append(this._configuration.FileName)
+                .ToString();
     }
 }
