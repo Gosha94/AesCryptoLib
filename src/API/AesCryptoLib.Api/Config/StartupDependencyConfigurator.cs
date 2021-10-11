@@ -1,8 +1,8 @@
 ﻿using Castle.Windsor;
 using AesCryptoLib.Core.Contracts;
-using AesCryptoLib.Core.CommonModels;
 using Castle.MicroKernel.Registration;
 using AesCryptoLib.JsonParser.FileConfigs;
+using AesCryptoLib.JsonParser.Repository;
 
 namespace AesCryptoLib.Api.Config
 {

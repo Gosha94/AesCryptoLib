@@ -1,6 +1,7 @@
 ﻿using AesCryptoLib.Api.Config;
 using AesCryptoLib.Core.Contracts;
 using AesCryptoLib.JsonParser.Helpers;
+using AesCryptoLib.BusinessLogic.Services;
 
 namespace AesCryptoLib.Api.PublicApi
 {
@@ -11,11 +12,19 @@ namespace AesCryptoLib.Api.PublicApi
     public sealed class CryptoApiController : IAesController
     {
 
+        #region Private Fields
+
         private readonly StartupDependencyConfigurator _configurator;
-        private readonly FileSearchService _searchService;
+        private readonly FileSearchService _fileService;
 
         private readonly IReadOnlyUserDataRepository _jsonFileRepository;
         private readonly IFileConfiguration _jsonFileConfiguration;
+
+        private AesCryptoService _cryptoService;
+
+        #endregion
+
+        #region Constructor
 
         /// <summary>
         /// Конструктор по умолчанию
@@ -28,8 +37,12 @@ namespace AesCryptoLib.Api.PublicApi
             this._jsonFileRepository = _configurator.GetRepositoryInstance();
             this._jsonFileConfiguration = _configurator.GetJsonConfigurationInstance();
 
-            this._searchService = new FileSearchService(this._jsonFileConfiguration);
+            this._fileService = new FileSearchService(this._jsonFileConfiguration);
         }
+
+        #endregion
+
+        #region Public Controller Api
 
         /// <summary>
         /// Метод получения расшифрованных данных
@@ -38,10 +51,14 @@ namespace AesCryptoLib.Api.PublicApi
         /// <returns></returns>
         public string GetDeclassifiedData(string mysteryString)
         {
-            var pathToJsonConfig = this._searchService.GetFullPathToJsonFile();
-            this._jsonFileRepository.GetUserDataById(0);
-            
-            return "There will be your clearText";
+            var secret = GetSecretFromRepository();
+
+            this._cryptoService = new AesCryptoService(secret);
+            var encryptedData = mysteryString;
+
+            var resultData = this._cryptoService.Decrypt(encryptedData);
+
+            return resultData;
         }
 
         /// <summary>
@@ -51,8 +68,28 @@ namespace AesCryptoLib.Api.PublicApi
         /// <returns></returns>
         public string GetMysteryData(string openString)
         {
-            return "There will be your mysteryText";
+            var secret = GetSecretFromRepository();
+
+            this._cryptoService = new AesCryptoService(secret);
+            var decryptedData = openString;
+
+            var resultData = this._cryptoService.Encrypt(decryptedData);
+
+            return resultData;
         }
+
+        #endregion
+
+        #region Private Methods
+
+        private string GetSecretFromRepository()
+        {
+            var pathToJsonConfig = this._fileService.GetFullPathToJsonFile();
+            var result = this._jsonFileRepository.GetSecretFromSource(pathToJsonConfig);
+            return result;
+        }
+
+        #endregion
 
     }
 }

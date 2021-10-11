@@ -1,5 +1,4 @@
 ﻿using AesCryptoLib.Core.CommonModels;
-using System.Collections.Generic;
 
 namespace AesCryptoLib.Core.Contracts
 {
@@ -11,17 +10,11 @@ namespace AesCryptoLib.Core.Contracts
     {
 
         /// <summary>
-        /// Метод получения всех данных из файла
+        /// Метод получения данных из Json файла
         /// </summary>
+        /// <param name="filePath">Путь к Json файлу</param>
         /// <returns></returns>
-        IEnumerable<UserData> GetAllUserDataFromSource();
-
-        /// <summary>
-        /// Метод получения конкретных данных по Id
-        /// </summary>
-        /// <param name="userDataId"></param>
-        /// <returns></returns>
-        UserData GetUserDataById(int userDataId);
+        string GetSecretFromSource(string filePath);
 
     }
 }
