@@ -1,18 +1,30 @@
-﻿using AesCryptoLib.JsonParser.Helpers;
+﻿using System.IO;
+using Newtonsoft.Json;
+using AesCryptoLib.Core.CommonModels;
 
 namespace AesCryptoLib.JsonParser.Context
 {
     /// <summary>
     /// Контекст данных, получаемых из JSON файла с конфигурацией
     /// </summary>
-    public sealed class JsonFileContext
+    internal sealed class JsonFileContext
     {
-        private JsonParseService _jsonParser;
 
-        public JsonFileContext()
+        /// <summary>
+        /// Метод получает данные пользователя из файла
+        /// </summary>
+        /// <returns></returns>
+        internal string GetSecretFromJson(string path)
         {
-            this._jsonParser = new JsonParseService();
-            this._jsonParser.GetDataFromJson();
+            UserData resultData;
+            using(var streamReader = new StreamReader(path))
+            {
+                string json = streamReader.ReadToEnd();
+                resultData = JsonConvert.DeserializeObject<UserData>(json);
+            }
+            
+            return resultData.AwesomeExternalData;
         }
+
     }
 }

@@ -47,8 +47,8 @@
     <Compile Include="Context\JsonFileContext.cs" />
     <Compile Include="FileConfigs\JsonDBaseConfiguration.cs" />
     <Compile Include="FileConfigs\JsonSaltFileConfiguration.cs" />
-    <Compile Include="Helpers\JsonParseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\UserDataRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

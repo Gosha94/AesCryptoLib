@@ -1,12 +1,7 @@
-﻿using AesCryptoLib.DLL.Controller;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace AesCryptoLib.Tests
+﻿namespace AesCryptoLib.BusinessLogic.UnitTests
 {
-    [TestClass]
-    public class CryptoManagerTests
+    public class Class1
     {
-
         private CryptoManager _testedCryptoManager;
         public CryptoManagerTests()
         {
@@ -19,8 +14,8 @@ namespace AesCryptoLib.Tests
             var shifr = "HNI4J6NqkHUOhgrSgoPv7rE4I0vfclHuYuj9iTMGkA==";
             var expected = "1";
             var actual = _testedCryptoManager.Decrypt(shifr);
-            
-            Assert.AreEqual(expected,actual);
+
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
