@@ -13,8 +13,6 @@ namespace AesCryptoLib.Api.PublicApi
     {
 
         #region Private Fields
-
-        private readonly StartupDependencyConfigurator _configurator;
         private readonly FileSearchService _fileService;
 
         private readonly IReadOnlyUserDataRepository _jsonFileRepository;
@@ -29,13 +27,10 @@ namespace AesCryptoLib.Api.PublicApi
         /// <summary>
         /// Конструктор по умолчанию
         /// </summary>
-        public CryptoApiController()
+        public CryptoApiController(IReadOnlyUserDataRepository jsonFileRepository, IFileConfiguration jsonFileConfiguration)
         {
-            this._configurator = new StartupDependencyConfigurator();
-            this._configurator.RegisterAllInstancesInApplication();
-
-            this._jsonFileRepository = _configurator.GetRepositoryInstance();
-            this._jsonFileConfiguration = _configurator.GetJsonConfigurationInstance();
+            this._jsonFileRepository = jsonFileRepository;
+            this._jsonFileConfiguration = jsonFileConfiguration;
 
             this._fileService = new FileSearchService(this._jsonFileConfiguration);
         }

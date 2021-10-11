@@ -31,17 +31,5 @@ namespace AesCryptoLib.Api.Config
         }
 
         #endregion
-
-        #region Instance Resolvers
-
-        internal IReadOnlyUserDataRepository GetRepositoryInstance()
-            => this._dependencyContainer.Resolve<IReadOnlyUserDataRepository>();
-
-        internal IFileConfiguration GetJsonConfigurationInstance()
-            => this._dependencyContainer.Resolve<IFileConfiguration>();
-
-        #endregion
-
-
     }
 }
