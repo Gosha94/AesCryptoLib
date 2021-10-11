@@ -1,16 +1,19 @@
 ﻿using System;
 using System.IO;
-using System.Text;
 using System.Security.Cryptography;
+using System.Text;
 
-namespace AesCryptoLib.DLL.Controller
+namespace AesCryptoLib.BusinessLogic.Services
 {
-    public class CryptoManager
+    /// <summary>
+    /// Класс описывает службу AES шифрования
+    /// </summary>
+    public sealed class AesCryptoService
     {
         private string _encryptionKey = "json!!!!!!!!!!!!!!!!!!!";
         private byte[] _salt;
 
-        public CryptoManager()
+        public AesCryptoService()
         {
             this._salt = GenerateSalt(15);
         }

@@ -44,13 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configs\JsonDBaseConfiguration.cs" />
+    <Compile Include="Configs\JsonSaltFileConfiguration.cs" />
+    <Compile Include="Context\JsonFileContext.cs" />
+    <Compile Include="Helpers\FileFindHelper.cs" />
+    <Compile Include="Helpers\JsonParseHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Context\" />
+    <ProjectReference Include="..\..\Core\AesCryptoLib.Core\AesCryptoLib.Core.csproj">
+      <Project>{928BB332-92DB-43C6-BE42-E6B39199E0F8}</Project>
+      <Name>AesCryptoLib.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
