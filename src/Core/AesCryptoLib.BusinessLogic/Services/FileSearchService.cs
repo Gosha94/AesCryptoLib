@@ -24,7 +24,7 @@ namespace AesCryptoLib.JsonParser.Helpers
         /// Метод возвращает полный путь к директории с файлом из настроек
         /// </summary>
         /// <returns></returns>
-        internal string GetFullPathToJsonFile()
+        public string GetFullPathToJsonFile()
             =>  Assembly.GetAssembly(typeof(IFileConfiguration)).Location + this._configuration.FileName;
 
 

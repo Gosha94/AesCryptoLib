@@ -11,24 +11,24 @@ namespace AesCryptoLib.Api.PublicApi
     public sealed class CryptoApiController : IAesController
     {
 
-        private StartupDependencyConfigurator _configurator;
-        private FileSearchService _searchService;
+        private readonly StartupDependencyConfigurator _configurator;
+        private readonly FileSearchService _searchService;
 
-        private IReadOnlyUserDataRepository _jsonFileRepository;
-        private IFileConfiguration _jsonFileConfiguration;
+        private readonly IReadOnlyUserDataRepository _jsonFileRepository;
+        private readonly IFileConfiguration _jsonFileConfiguration;
 
         /// <summary>
         /// Конструктор по умолчанию
         /// </summary>
         public CryptoApiController()
         {
-            _configurator = new StartupDependencyConfigurator();
-            _configurator.RegisterAllInstancesInApplication();
+            this._configurator = new StartupDependencyConfigurator();
+            this._configurator.RegisterAllInstancesInApplication();
 
-            _jsonFileRepository = _configurator.GetRepositoryInstance();
-            _jsonFileConfiguration = _configurator.GetJsonConfigurationInstance();
+            this._jsonFileRepository = _configurator.GetRepositoryInstance();
+            this._jsonFileConfiguration = _configurator.GetJsonConfigurationInstance();
 
-            _searchService = new FileSearchService(_jsonFileConfiguration);
+            this._searchService = new FileSearchService(this._jsonFileConfiguration);
         }
 
         /// <summary>
@@ -38,6 +38,9 @@ namespace AesCryptoLib.Api.PublicApi
         /// <returns></returns>
         public string GetDeclassifiedData(string mysteryString)
         {
+            var pathToJsonConfig = this._searchService.GetFullPathToJsonFile();
+            this._jsonFileRepository.GetUserDataById(0);
+            
             return "There will be your clearText";
         }
 

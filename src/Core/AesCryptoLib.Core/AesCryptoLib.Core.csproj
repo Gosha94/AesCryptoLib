@@ -46,8 +46,6 @@
     <Compile Include="Contracts\IAesController.cs" />
     <Compile Include="Contracts\IFileConfiguration.cs" />
     <Compile Include="Contracts\IReadOnlyUserDataRepository.cs" />
-    <Compile Include="FileConfigs\JsonDBaseConfiguration.cs" />
-    <Compile Include="FileConfigs\JsonSaltFileConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
