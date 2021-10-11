@@ -1,4 +1,5 @@
 ﻿using AesCryptoLib.Core.Contracts;
+using System.Configuration;
 
 namespace AesCryptoLib.JsonParser.FileConfigs
 {
@@ -17,8 +18,8 @@ namespace AesCryptoLib.JsonParser.FileConfigs
         /// </summary>
         internal JsonSaltFileConfiguration()
         {
-            this.FileDirectory = "D:\\UkTransmitterConfig\\JsonSecret\\";
-            this.FileName = "UserData.json";
+            this.FileDirectory = "";
+            this.FileName = ConfigurationManager.AppSettings.Get("pathTestUserData");
         }
 
     }
