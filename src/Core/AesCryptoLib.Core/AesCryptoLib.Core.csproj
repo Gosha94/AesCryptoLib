@@ -41,13 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommonModels\UserDataModel.cs" />
     <Compile Include="Contracts\IAesController.cs" />
-    <Compile Include="Contracts\IFileConfiguration.cs" />
-    <Compile Include="Contracts\IReadOnlyUserDataRepository.cs" />
-    <Compile Include="CustomExceptions\JsonSecretNotFoundException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="CommonModels\" />
+    <Folder Include="CustomExceptions\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
