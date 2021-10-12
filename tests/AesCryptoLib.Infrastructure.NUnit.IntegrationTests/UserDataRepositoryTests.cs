@@ -8,12 +8,6 @@ namespace AesCryptoLib.Infrastructure.NUnit.IntegrationTests
     [TestFixture]
     public class UserDataRepositoryTests
     {
-        
-        //[SetUp]
-        //public void SetupBeforeEachTest()
-        //{
-
-        //}
 
         [Test]
         public void GetSecretFromSource_CorrectPath_ReturnCorrectSecret()

@@ -3,7 +3,7 @@
     public class UserData
     {
         public int Id { get; set; }
-        public string AwesomeExternalData { get; set; }
+        public string NeededData { get; set; }
         public string CreatedAt { get; set; }
         public string UpdatedAt { get; set; }
     }
