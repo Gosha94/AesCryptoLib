@@ -3,8 +3,9 @@
 namespace AesCryptoLib.Api.UnitTests
 {
     [TestFixture]
-    internal class CryptoApiControllerTests
+    public class CryptoApiControllerTests
     {
+
         [Test]
         public void Test()
         {

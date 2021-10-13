@@ -43,6 +43,7 @@ namespace AesCryptoLib.BusinessLogic.Services
             }
             return clearText;
         }
+
         public string Decrypt(string codedText)
         {
             byte[] codedSalt = Convert.FromBase64String(codedText.Substring(0, 20));
@@ -65,7 +66,6 @@ namespace AesCryptoLib.BusinessLogic.Services
             }
             return codedText;
         }
-
 
         #endregion
 
