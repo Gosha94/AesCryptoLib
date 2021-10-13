@@ -54,6 +54,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Core\AesCryptoLib.BusinessLogic\AesCryptoLib.BusinessLogic.csproj">
+      <Project>{128BE15D-E165-49C3-BA28-30FFA6DD8DC9}</Project>
+      <Name>AesCryptoLib.BusinessLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
