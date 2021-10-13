@@ -44,11 +44,5 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AesCryptoService.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AesCryptoLib.Core\AesCryptoLib.Core.csproj">
-      <Project>{928BB332-92DB-43C6-BE42-E6B39199E0F8}</Project>
-      <Name>AesCryptoLib.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
