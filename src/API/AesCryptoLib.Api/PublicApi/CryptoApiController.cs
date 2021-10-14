@@ -21,13 +21,35 @@ namespace AesCryptoLib.Api.PublicApi
 
         #endregion
 
+        #region Public Properties
+
+        public IFileConfiguration JsonConfiguration
+        {
+            get => this._jsonConfiguration;
+            private set => this._jsonConfiguration = value;
+        }
+
+        #endregion
+
+
         #region Constructor
 
         /// <summary>
         /// Конструктор по умолчанию
         /// </summary>
         public CryptoApiController()
-        { }
+        {
+            JsonConfiguration = new JsonSaltFileConfiguration();
+        }
+
+        /// <summary>
+        /// Дополнительный конструктор для внедрения конфигурации извне
+        /// </summary>
+        /// <param name="jsonConfig"></param>
+        public CryptoApiController(IFileConfiguration jsonConfig)
+        {
+            JsonConfiguration = jsonConfig;
+        }
 
         #endregion
 
@@ -71,8 +93,8 @@ namespace AesCryptoLib.Api.PublicApi
         /// <returns></returns>
         private string GetSecretFromJsonParsingApi()
         {
-            this._jsonConfiguration = new JsonSaltFileConfiguration();
-            var result = this._jsonParsingApi.GetSecretJsonData(this._jsonConfiguration);
+            this._jsonParsingApi = new JsonParsingApi();
+            var result = this._jsonParsingApi.GetSecretJsonData(JsonConfiguration);
             return result;
         }
 
